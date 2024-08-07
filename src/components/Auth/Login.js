@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginUser } from '../../redux/auth/authActions';
 // import { TextField, Button, Container, Typography, Alert } from '@material-ui/core';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'; // Updated import
 
 
 import { TextField, Button, Container, Typography, Alert } from '@mui/material';
@@ -10,7 +10,7 @@ import { SomeIcon } from '@mui/icons-material';
 
 const Login = () => {
   const dispatch = useDispatch();
-  const history = useHistory();
+  const navigate = useNavigate(); // Updated hook
   const auth = useSelector(state => state.auth);
   const [credentials, setCredentials] = useState({ username: '', password: '' });
 
@@ -24,7 +24,7 @@ const Login = () => {
   };
 
   if (auth.token) {
-    history.push('/students');
+    navigate('/students'); // Updated navigation
   }
 
   return (

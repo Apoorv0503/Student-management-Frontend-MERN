@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './components/Auth/Login';
 import StudentList from './components/Students/StudentList';
 import Navbar from './components/Layout/Navbar';
-import { Container } from '@material-ui/core';
+import {Container } from '@mui/material';
+// import { SomeIcon } from '@mui/icons-material';
 
 function App() {
   return (

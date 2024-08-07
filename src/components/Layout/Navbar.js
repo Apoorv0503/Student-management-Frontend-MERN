@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { TextField, Button, Container, Typography, Alert } from '@mui/material';
+import { TextField, Button, Container, Typography, Alert, AppBar, Toolbar } from '@mui/material';
 import { logoutUser } from '../../redux/auth/authActions';
 
 const Navbar = () => {
